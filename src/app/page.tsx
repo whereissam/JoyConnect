@@ -8,6 +8,7 @@ import upload_cloud_icon from "@/assets/upload.svg";
 import Advanced from "@/components/advanced";
 import mint_fail_img from "@/assets/mint_fail.jpg";
 import mint_success_img from "@/assets/mint_success.jpg";
+import { SignIn } from "@/components/SignIn";
 
 import { Step } from "@/core/setting";
 
@@ -199,6 +200,7 @@ const Home = () => {
                     >
                       Next
                     </button>
+                    <SignIn />
                   </div>
                 </div>
               </>

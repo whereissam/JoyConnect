@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import MiniKitProvider from "./minikit-provider";
+import MiniKitProvider from "@/components/minikit-provider";
+import NextAuthProvider from "@/components/next-auth-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <MiniKitProvider>
-        <body className={inter.className}>{children}</body>
-      </MiniKitProvider>
+      <NextAuthProvider>
+        <MiniKitProvider>
+          <body className={inter.className}>{children}</body>
+        </MiniKitProvider>
+      </NextAuthProvider>
     </html>
   );
 }
