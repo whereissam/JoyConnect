@@ -121,12 +121,9 @@ function Advanced() {
                 >
                   <div className="card p-4">
                     <div className="h-[220px] overflow-hidden">
-                      <Image
+                      <img
                         src={character.url}
-                        alt={`Profile of ${character.name}`}
-                        width={220}
-                        height={220}
-                        className="w-full mb-5"
+                        className="w-full mb-5 w-[220px]"
                       />
                     </div>
                     <h3 className="text-black">{character.name}</h3>
